@@ -6,10 +6,13 @@ After implementing their editor they found it was even slower than what they had
 have given you their current text processing logic and have tasked you with reimplementing it
 with a focus on performance.
 
+# What I have done:
 1. Analysis different approach to copy and paste the *.py files in "CopyFrom" folder to "CopyTo" folder;
 2. Measure the time efficiency for each approach
 3. Clear out the "CopyTo" directory after each measurement
 4. Output the best approach ranking according to each time consumption
+
+Even though I only measuring copy python files efficiency, the code can quickly adapt to measure other type/size files!
 
 ## Installation
 
