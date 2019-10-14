@@ -19,11 +19,14 @@ No neccesary
 ## Usage
 
 ```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+import sys
+import shutil
+from threading import Thread
+from datetime import datetime
+import os
+import glob
+from multiprocessing import Process
+import subprocess
 ```
 
 ## Contributing
