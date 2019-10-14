@@ -16,8 +16,10 @@ Even though I only measuring copy python files efficiency, the code can quickly 
 
 ## Installation
 
-No neccesary
-
+PySimpleGUI
+pip install pysimplegui
+or
+pip3 install pysimplegui
 
 ## Usage
 
