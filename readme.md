@@ -17,10 +17,11 @@ Even though I only measuring copy python files efficiency, the code can quickly 
 ## Installation
 
 PySimpleGUI
+```
 pip install pysimplegui
 or
 pip3 install pysimplegui
-
+```
 ## Usage
 
 ```python
