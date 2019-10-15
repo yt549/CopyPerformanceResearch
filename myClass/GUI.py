@@ -17,7 +17,7 @@ layout = [  [sg.Text('This is the test for Neeva')],
             [sg.Button('Ok'), sg.Button('Cancel')] ]
 
 # Create the Window
-window = sg.Window('Window Title', layout)
+window = sg.Window('Copy and Paste Machine', layout)
 # Event Loop to process "events" and get the "values" of the inputs
 while True:
     event, values = window.read()

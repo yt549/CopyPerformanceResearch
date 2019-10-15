@@ -134,7 +134,7 @@ def main(dir_src = "/Users/tanyingkai/Desktop/Neeva/CopyFrom", dir_dst = "/Users
     #
     # time_table.sort(key = lambda x:x[0])
     #
-    # print("the best performance to worst performance: ", [i[1] for i in time_table])
+    print("the best performance to worst performance: ", [i[1] for i in time_table])
 
 
 if __name__ == '__main__':
