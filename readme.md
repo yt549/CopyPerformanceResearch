@@ -11,6 +11,7 @@ with a focus on performance.
 2. Measure the time efficiency for each approach
 3. Clear out the "CopyTo" directory after each measurement
 4. Output the best approach ranking according to each time consumption
+5. Use PySimpleGUI to create a interface. input: outsource/inputsource directory
 
 Even though I only measuring copy python files efficiency, the code can quickly adapt to measure other type/size files!
 
