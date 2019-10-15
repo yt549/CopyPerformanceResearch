@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cec5287-fcab-4fbe-a66b-d0677b7ae4d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/myClass/Editor.py" beforeDir="false" afterPath="$PROJECT_DIR$/myClass/Editor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myClass/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/myClass/GUI.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myClass/Editor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="136" column="4" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="84" />
+            <state relative-caret-position="1359">
+              <caret line="132" column="47" lean-forward="true" selection-start-line="132" selection-start-column="47" selection-end-line="132" selection-end-column="47" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -28,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myClass/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            <state relative-caret-position="195">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -49,6 +48,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>windows</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -57,8 +61,8 @@
       <list>
         <option value="$PROJECT_DIR$/Editor.py" />
         <option value="$PROJECT_DIR$/GUI.py" />
-        <option value="$PROJECT_DIR$/myClass/GUI.py" />
         <option value="$PROJECT_DIR$/myClass/Editor.py" />
+        <option value="$PROJECT_DIR$/myClass/GUI.py" />
       </list>
     </option>
   </component>
@@ -184,6 +188,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1251" height="986" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916527" weight="0.23414634" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -238,22 +243,22 @@
     <entry file="file://$PROJECT_DIR$/GUI.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/myClass/GUI.py">
+    <entry file="file://$PROJECT_DIR$/myClass/Editor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        <state relative-caret-position="1359">
+          <caret line="132" column="47" lean-forward="true" selection-start-line="132" selection-start-column="47" selection-end-line="132" selection-end-column="47" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myClass/Editor.py">
+    <entry file="file://$PROJECT_DIR$/myClass/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="136" column="4" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="84" />
+        <state relative-caret-position="195">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>

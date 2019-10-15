@@ -11,7 +11,7 @@ File type: python (can modify Editor.py to any specific type)
 '''
 # All the stuff inside your window.
 layout = [  [sg.Text('This is the test for Neeva')],
-            [sg.Text('Enter the directory of python files to copy from: '), sg.InputText()],
+            [sg.Text('Enter the directory of files to copy from: '), sg.InputText()],
             [sg.Text('Enter the copy to directory: '), sg.InputText()],
             [sg.Text('File type to transfer (.py for example): '), sg.InputText()],
             [sg.Button('Ok'), sg.Button('Cancel')] ]
