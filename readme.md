@@ -15,10 +15,12 @@ with a focus on performance.
 
 # Conclusion:
 Research on different approach:
-shutil copyfile():  0:00:00.013696
-shutil CopyObj():  0:00:00.007557
-thread:  0:00:00.014585
-muliple process:  0:00:00.056398
+1. shutil copyfile():  0:00:00.013696
+2. shutil CopyObj():  0:00:00.007557
+3. thread:  0:00:00.014585
+4. muliple process:  0:00:00.056398
+
+In general:
 the best performance to worst performance:  ['shutil copyfile()', 'shutil CopyObj()', 'thread', 'muliple process']
 
 Due to focus on time efficiency, I test five different approach copy & paste, the best one is CopyFile() from shutil package. The GUI can extend to any specifc type of files. Users only need to specify the In/Out directory and then the selected type of file would be transferred!
