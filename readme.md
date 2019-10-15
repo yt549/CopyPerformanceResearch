@@ -13,6 +13,10 @@ with a focus on performance.
 4. Output the best approach ranking according to each time consumption
 5. Use PySimpleGUI to create a interface. input: outsource/inputsource directory
 
+# Conclusion:
+Due to focus on time efficiency, I test five different approach copy & paste, the best one is CopyFile() from shutil package. The GUI can extend to any specifc type of files. Users only need to specify the In/Out directory and then the selected type of file would be transferred!
+
+
 Even though I only measuring copy python files efficiency, the code can quickly adapt to measure other type/size files!
 
 ## Installation
