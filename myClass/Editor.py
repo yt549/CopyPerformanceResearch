@@ -27,10 +27,10 @@ def clear_files(dir_dst):
     for f in files:
         os.remove(f)
 
-def copy1_shutil_CopyFile(dir_src, dir_dst):
+def copy1_shutil_CopyFile(dir_src, dir_dst, file_type):
     try:
         for filename in os.listdir(dir_src):
-            if filename.endswith('.py'):
+            if filename.endswith(file_type):
                 shutil.copy(dir_src + '/' + filename, dir_dst)
 
     except IOError as e:
@@ -40,10 +40,10 @@ def copy1_shutil_CopyFile(dir_src, dir_dst):
         print("Unexpected error:", sys.exc_info())
         exit(1)
 
-def copy2_shutil_CopyObj(dir_src, dir_dst, buffer_size=16000):
+def copy2_shutil_CopyObj(dir_src, dir_dst, file_type, buffer_size=16000):
     try:
         for filename in os.listdir(dir_src):
-            if filename.endswith('.py'):
+            if filename.endswith(file_type):
                 with open(dir_src + '/' + filename, 'rb') as fsrc:
                     with open(dir_dst + '/' + filename, 'wb') as fdest:
                         shutil.copyfileobj(fsrc, fdest, buffer_size)
@@ -56,14 +56,14 @@ def copy2_shutil_CopyObj(dir_src, dir_dst, buffer_size=16000):
         exit(1)
 
 
-def copy3_Thread(dir_src, dir_dst):
+def copy3_Thread(dir_src, dir_dst, file_type):
     for filename in os.listdir(dir_src):
-        if filename.endswith('.py'):
+        if filename.endswith(file_type):
             Thread(target=shutil.copy, args=[dir_src + '/' + filename, dir_dst + '/' + filename]).start()
 
-def copy4_Multi_Process(dir_src, dir_dst):
+def copy4_Multi_Process(dir_src, dir_dst, file_type):
     for filename in os.listdir(dir_src):
-        if filename.endswith('.py'):
+        if filename.endswith(file_type):
             Process(target=shutil.copy, args=[dir_src + '/' + filename, dir_dst + '/' + filename]).start()
 
 # def copy5_Subprocess():
@@ -78,14 +78,14 @@ def copy4_Multi_Process(dir_src, dir_dst):
 #     subprocess.call(cmd, shell=True)
 
 
-def main(dir_src = "v", dir_dst = "/Users/tanyingkai/Desktop/Neeva/CopyTo"):
+def main(dir_src = "/Users/tanyingkai/Desktop/Neeva/CopyFrom", dir_dst = "/Users/tanyingkai/Desktop/Neeva/CopyTo", file_type = ".py"):
     # dir_src = "/Users/tanyingkai/Desktop/Neeva/CopyFrom"
     # dir_dst = "/Users/tanyingkai/Desktop/Neeva/CopyTo"
 
     time_table = []
     # test 1
     t1_start = datetime.now()
-    copy1_shutil_CopyFile(dir_src, dir_dst)
+    copy1_shutil_CopyFile(dir_src, dir_dst, file_type)
     t1_end = datetime.now()-t1_start
     print("shutil copyfile(): ", t1_end)
     # clear
@@ -95,7 +95,7 @@ def main(dir_src = "v", dir_dst = "/Users/tanyingkai/Desktop/Neeva/CopyTo"):
 
     # test 2
     t2_start = datetime.now()
-    copy2_shutil_CopyObj(dir_src, dir_dst)
+    copy2_shutil_CopyObj(dir_src, dir_dst, file_type)
     t2_end = datetime.now() - t2_start
     print("shutil CopyObj(): ", t2_end)
     # clear
@@ -105,7 +105,7 @@ def main(dir_src = "v", dir_dst = "/Users/tanyingkai/Desktop/Neeva/CopyTo"):
 
     # test 3
     t3_start = datetime.now()
-    copy3_Thread(dir_src, dir_dst)
+    copy3_Thread(dir_src, dir_dst, file_type)
     t3_end = datetime.now() - t3_start
     print("thread: ", t3_end)
     # clear
@@ -115,7 +115,7 @@ def main(dir_src = "v", dir_dst = "/Users/tanyingkai/Desktop/Neeva/CopyTo"):
 
     # test 4
     t4_start = datetime.now()
-    copy4_Multi_Process(dir_src, dir_dst)
+    copy4_Multi_Process(dir_src, dir_dst, file_type)
     t4_end = datetime.now() - t4_start
     print("muliple process: ", t4_end)
     # clear
@@ -129,12 +129,12 @@ def main(dir_src = "v", dir_dst = "/Users/tanyingkai/Desktop/Neeva/CopyTo"):
     # t5_end = datetime.now() - t5_start
     # print("subprocess: ", t5_end)
     # # clear
-    # clear_files()
+    # clear_files(dir_dst)
     # time_table.append([t5_end, "subprocess"])
     #
     # time_table.sort(key = lambda x:x[0])
-
-    print("the best performance to worst performance: ", [i[1] for i in time_table])
+    #
+    # print("the best performance to worst performance: ", [i[1] for i in time_table])
 
 
 if __name__ == '__main__':

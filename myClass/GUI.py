@@ -13,6 +13,7 @@ File type: python (can modify Editor.py to any specific type)
 layout = [  [sg.Text('This is the test for Neeva')],
             [sg.Text('Enter the directory of python files to copy from: '), sg.InputText()],
             [sg.Text('Enter the copy to directory: '), sg.InputText()],
+            [sg.Text('File type to transfer (.py for example): '), sg.InputText()],
             [sg.Button('Ok'), sg.Button('Cancel')] ]
 
 # Create the Window
@@ -24,9 +25,10 @@ while True:
         break
     dir_src = values[0]
     dir_dst = values[1]
+    file_type = values[2]
     try:
         # here, I use copy1_shutil_CopyFile because it is the fastest one
-        e = Editor.copy1_shutil_CopyFile(dir_src, dir_dst)
+        e = Editor.copy1_shutil_CopyFile(dir_src, dir_dst, file_type)
         break
     except IOError as e:
         print("Unable to copy file. %s" % e)
@@ -35,4 +37,3 @@ while True:
         print("Unexpected error:", sys.exc_info())
         exit(1)
 window.close()
-
