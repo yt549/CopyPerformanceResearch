@@ -78,7 +78,7 @@ def copy4_Multi_Process(dir_src, dir_dst):
 #     subprocess.call(cmd, shell=True)
 
 
-def main(dir_src = "/Users/tanyingkai/Desktop/Neeva/CopyFrom", dir_dst = "/Users/tanyingkai/Desktop/Neeva/CopyTo"):
+def main(dir_src = "v", dir_dst = "/Users/tanyingkai/Desktop/Neeva/CopyTo"):
     # dir_src = "/Users/tanyingkai/Desktop/Neeva/CopyFrom"
     # dir_dst = "/Users/tanyingkai/Desktop/Neeva/CopyTo"
 

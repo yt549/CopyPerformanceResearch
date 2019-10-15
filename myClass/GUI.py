@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
-from myClass.Editor import Editor
-
+from myClass import Editor
+import sys
 '''
 Author: Yingkai Tan
 
@@ -24,7 +24,15 @@ while True:
         break
     dir_src = values[0]
     dir_dst = values[1]
-    e = Editor(dir_src, dir_dst)
-    print(e)
+    try:
+        # here, I use copy1_shutil_CopyFile because it is the fastest one
+        e = Editor.copy1_shutil_CopyFile(dir_src, dir_dst)
+        break
+    except IOError as e:
+        print("Unable to copy file. %s" % e)
+        exit(1)
+    except:
+        print("Unexpected error:", sys.exc_info())
+        exit(1)
 window.close()
 
