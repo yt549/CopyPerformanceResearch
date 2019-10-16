@@ -1,4 +1,4 @@
-# For Neeva!
+# Problem
 
 Engineers at QwickType Software found they spend so much time copying and pasting code
 that they decided to build their own text editor to speed up their development workflow.
